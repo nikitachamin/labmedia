@@ -1,0 +1,15 @@
+
+@use 'header';
+@use 'design';
+@use 'scanner';
+@use 'accessories';
+@use 'apps';
+
+body {
+  font-family: Arial, sans-serif;
+ 
+}
+* {
+ margin: 0;
+  padding: 0;
+}

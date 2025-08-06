@@ -1,0 +1,154 @@
+.container {
+    max-width: 1000px;
+    margin : auto;
+}
+
+.header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 8px 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    position: relative;
+    box-sizing: border-box;
+      &__image_container{
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-right: 30px;
+  }
+      &__burger {
+        position: absolute;
+        width: 32px;
+        right: 25px;
+        display: flex;
+        align-items: center;
+    }
+    &__title{
+    max-width: 704px;
+    display: flex;
+    align-items: center;
+        h1{
+        color: var(--000000, #000);
+        font-family: "PT Root UI";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 21px; 
+    }
+    }
+    &__redline{
+    display: flex;
+    width: 207px;
+    height: 3px;
+    background-color: #D70E2A;
+    position: absolute;
+    top: 59px;
+    left: 0;
+  
+}
+}
+
+
+
+
+
+.burger-checkbox {
+  display: none;
+}
+
+.burger {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 16px;
+  background: transparent;
+  border: none;
+  &__line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #D70E2A;
+  transition: all 0.3s ease;
+}
+  &__line:nth-child(1) {
+    top: 0;
+  }
+
+
+  &__line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+
+  &__line:nth-child(3) {
+    bottom: 0;
+  }
+
+
+
+}
+
+
+.burger-checkbox:checked + .burger .burger__line:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.burger-checkbox:checked + .burger .burger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-checkbox:checked + .burger .burger__line:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+
+.header-mobile__title{
+  display: none;
+}
+
+@media (max-width: 425px) {
+  .container {
+    max-width: 100%;
+    margin : 0px;
+}
+
+ .header{
+  &__title{
+    display: none;
+  }
+  &__image_container{
+      gap: 15px;
+      align-items: center;
+      
+  }
+  &__image_container img{
+      width: 25px;
+      height: 25px;
+      
+  }
+  &__redline{
+    display: none; 
+}
+ }
+ .header-mobile__title{
+  display: block;
+  width: 100%;
+  background: var(--f-9-f-9-f-9, #EFEFEF);
+  padding: 5px 15px;
+  box-sizing: border-box;
+ }
+ .header-mobile__title h1{
+    color: var(--000000, #000);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px; /* 140% */
+ }
+}
