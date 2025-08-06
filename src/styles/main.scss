@@ -4,9 +4,9 @@
 @use 'scanner';
 @use 'accessories';
 @use 'apps';
-
+@use './fonts/ptroot.scss';
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'PT Root UI';
  
 }
 * {
